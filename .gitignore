@@ -62,3 +62,6 @@ todo.txt
 
 #vscode config
 .vscode/
+
+# sqlite database
+notes.db
