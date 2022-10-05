@@ -34,12 +34,20 @@ jobs:
       run: |
         pytest
         
+  deploy-check:
+    name: "Check if ready for deployment"
+    needs: build
+    runs-on: ubuntu-latest
+    outputs:
+      deploy-ready: ${{ secrets.TF_API_TOKEN != null }}
+  
   deploy:
     name: "Terraform deploy"
-    needs: build
+    needs: deploy-check
     # env:
     #  TF_TOKEN: ${{ secrets.TF_API_TOKEN }}
-    if: ${{ secrets.TF_API_TOKEN != null }}
+    # if: ${{ secrets.TF_API_TOKEN != null }}
+    if: needs.deploy-check.outputs.deploy-ready == 'true'
     runs-on: ubuntu-latest
     defaults:
       run:
