@@ -39,7 +39,15 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     outputs:
-      deploy-ready: ${{ secrets.TF_API_TOKEN != null }}
+      deploy-ready: ${{ steps.check.outputs.deploy-ready }}
+    steps:
+      - name: "Check if Terraform token is setup"
+        id: check
+        env:
+          TF_TOKEN: ${{ secrets.TF_API_TOKEN }}
+        run: |
+          echo "deploy-ready: ${{ env.TF_TOKEN != '' }}"
+          echo "::set-output name=deploy-ready::${{ env.TF_TOKEN != '' }}"
   
   deploy:
     name: "Terraform deploy"
