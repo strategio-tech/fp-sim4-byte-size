@@ -20,36 +20,51 @@ Notekeeper is built upon [A-Simple-Note-Taking-Web-App by Omkar Pathak](https://
 
 ### CI/CD Pipeline
 
-![CI/CD Pipeline](results/ViewNote.png)
+![CI/CD Pipeline](readme-images/CI-CD-Pipeline.png)
 
 ### AWS Deployment
 
-![AWS Deployment](results/ViewNote.png)
+![AWS Deployment](readme-images/Cloud-Architecture.png)
 
 ## Features
 
-### Creating a new note
-Simple interface with live preview and markdown support
+### Adding a new note
+Markdown supported entry field, live preview, entry for note title, and tag(s) selection field.
 
-![Creating a new Note](results/NewNote.png)
+![Adding a new Note](readme-images/AddNote.PNG)
 
 ### Viewing a note
-Edit box provided to simply edit the note
+See note detail and contents, with options to edit or delete the note.
 
-![Viewing a note](results/ViewNote.png)
+![Viewing a note](readme-images/ViewNote.PNG)
+
+### Viewing all notes
+See a list of all notes stored.
+
+![Viewing all notes](readme-images/ViewAllNotes.PNG)
+
+### Searching notes
+Search for keywords in note titles to filter results.
+
+![Searching notes](readme-images/SearchNotes.PNG)
 
 ### Adding a tag
-![Adding a tag](results/NewTag.png)
+![Adding a tag](readme-images/AddTag.PNG)
 
 ### Viewing all tags
-You can click on any tag to see all notes tagged under *that* tag
+See a list of all the created tags.
 
-![Viewing all tags](results/ViewTag.png)
+![Viewing all tags](readme-images/ViewAllTags.PNG)
+
+### Viewing tagged notes
+See a list of all notes tagged with a specific tag.
+
+![Viewing tagged notes](readme-images/ViewTaggedNotes.PNG)
 
 ### Profile Settings
-Profile settings to see user details, change email and see notes and tags saved by particular user
+Profile settings page, which displays details about the user, an editable user email field, and links to the pages that show all notes and tags stored on the account. Another search bar for the notes appears here for convenience.
 
-![Profile Settings](results/ProfileSettings.png)
+![Profile Settings](readme-images/ViewProfile.PNG)
 
 ## Technologies Used
 
