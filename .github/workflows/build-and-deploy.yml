@@ -39,7 +39,7 @@ jobs:
     needs: build
     env:
       TF_TOKEN: ${{ secrets.TF_API_TOKEN }}
-    if: TF_TOKEN != null
+    if: $TF_TOKEN != null
     runs-on: ubuntu-latest
     defaults:
       run:
