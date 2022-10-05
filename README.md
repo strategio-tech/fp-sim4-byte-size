@@ -1,68 +1,107 @@
-# A-Simple-Note-Taking-Web-App
-An easy to use and deploy web app built using Flask
+# Notekeeper
+An open source web application built using Python and Flask, integrating build and deploy workflows through GitHub actions.
 
-Wanna try this app? Visit: [http://omkarpathak27.pythonanywhere.com/](http://omkarpathak27.pythonanywhere.com/)
+## Table of Contents
+* [General Information](#general-information)
+* [Architecture](#architecture)
+* [Features](#features)
+* [Technologies Used](#technologies-used)
+* [Requirements](#requirements)
+* [Usage](#usage)
+* [Acknowledgements](#acknowledgements)
+* [License](#license)
 
-# Features:
+<!-- * [Room for Improvement](#room-for-improvement) -->
 
-* Simple Web application, easy to use and *very* easy to deploy locally
-* Written in simple Python. Even a beginner Python developer can contribute to this
-* Support for SQLite, so you can easily play with it
-* REST API for retrieving data easily
+## General Information
+Notekeeper is built upon [A-Simple-Note-Taking-Web-App by Omkar Pathak](https://github.com/OmkarPathak/A-Simple-Note-Taking-Web-App). This project is a part of Byte Size's Final Project in the Strategio Enterprise Simulator: to create and run a CI/CD pipeline for a web application. The application's [Features](#features) are detailed later on in this document. In addition to those, this repository contains workflows to build and test Python project files, and (if enabled) deploy the web app to an AWS EC2 instance using Terraform Cloud.
 
-# Requirements:
+## Architecture
 
-Execute the following command to install the required third party libraries:<br />
+### CI/CD Pipeline
 
-`pip3 install -r requirements.txt`
+![CI/CD Pipeline](results/ViewNote.png)
 
-# Usage:
-Clone this repository:
+### AWS Deployment
 
-`git clone https://github.com/OmkarPathak/A-Simple-Note-Taking-Web-App.git`
+![AWS Deployment](results/ViewNote.png)
 
-Install the dependencies by simply executing:
+## Features
 
-`pip3 install -r requirements.txt`
-
-Run this command to start the app:
-
-`python3 manage.py`
-
-Visit `0.0.0.0:5000` on your web browser
-
-Happy Noting :)
-
-Built with ♥ by [`Omkar Pathak`](http://www.omkarpathak.in/)
-
-# Results
-
-## Creating a new note
-Simple innterface with live preview and markdown support
+### Creating a new note
+Simple interface with live preview and markdown support
 
 ![Creating a new Note](results/NewNote.png)
 
-## Viewing a note
+### Viewing a note
 Edit box provided to simply edit the note
 
 ![Viewing a note](results/ViewNote.png)
 
-## Adding a tag
+### Adding a tag
 ![Adding a tag](results/NewTag.png)
 
-## Viewing all tags
+### Viewing all tags
 You can click on any tag to see all notes tagged under *that* tag
 
 ![Viewing all tags](results/ViewTag.png)
 
-## Profile Settings
+### Profile Settings
 Profile settings to see user details, change email and see notes and tags saved by particular user
+
 ![Profile Settings](results/ProfileSettings.png)
 
-# Donation
+## Technologies Used
 
-If you have found my softwares to be of any use to you, do consider helping me pay my internet bills. This would encourage me to create many such softwares :)
+- Python 3.8.14
+- Flask 0.12.2
+- SQLite
+- Pytest
+- Terraform Cloud*
+- AWS EC2*
 
-| PayPal | <a href="https://paypal.me/omkarpathak27" target="_blank"><img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" alt="Donate via PayPal!" title="Donate via PayPal!" /></a> |
-|:-------------------------------------------:|:-------------------------------------------------------------:|
-| ₹ (INR)  | <a href="https://www.instamojo.com/@omkarpathak/" target="_blank"><img src="https://www.soldermall.com/images/pic-online-payment.jpg" alt="Donate via Instamojo" title="Donate via instamojo" /></a> |
+*(\* optional)*
+
+## Requirements:
+
+- Python 3.8.14 (other versions may break dependencies)
+- pip3
+- Required third party libraries from `requirements.txt`
+
+To install pip3, ensure your package manager is up to date. 
+
+    # either
+    apt-get update -y
+    # or
+    yum update -y
+
+Then, grab the python3-pip package.
+
+    # either
+    apt-get -y install python3-pip
+    # or
+    yum install python3-pip -y
+
+## Usage:
+
+Clone this repository:
+
+    git clone https://github.com/strategio-tech/fp-sim4-byte-size.git
+
+Change into the cloned directory and install the dependencies:
+
+    cd fp-sim4-byte-size
+    pip3 install -r requirements.txt
+
+Run this command to start the app:
+
+    python3 manage.py
+
+Visit `localhost:5000` or `0.0.0.0:5000` in your web browser, and voilà!
+
+
+## Acknowledgements
+
+This project was inspired by and built upon [A-Simple-Note-Taking-Web-App by Omkar Pathak](https://github.com/OmkarPathak/A-Simple-Note-Taking-Web-App).
+
+## [License](LICENSE)
