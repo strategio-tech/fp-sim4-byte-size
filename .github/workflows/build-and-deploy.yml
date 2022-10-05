@@ -37,9 +37,9 @@ jobs:
   deploy:
     name: "Terraform deploy"
     needs: build
-    env:
-      TF_TOKEN: ${{ secrets.TF_API_TOKEN }}
-    if: ${{ env.TF_TOKEN != null }}
+    # env:
+    #  TF_TOKEN: ${{ secrets.TF_API_TOKEN }}
+    if: ${{ secrets.TF_API_TOKEN != null }}
     runs-on: ubuntu-latest
     defaults:
       run:
