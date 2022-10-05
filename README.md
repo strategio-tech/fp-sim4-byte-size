@@ -81,6 +81,7 @@ Profile settings page, which displays details about the user, an editable user e
 
 - Python 3.8.14 (other versions may break dependencies)
 - pip3
+- .flaskenv
 - Required third party libraries from `requirements.txt`
 
 To install pip3, ensure your package manager is up to date. 
@@ -96,6 +97,10 @@ Then, grab the python3-pip package.
     apt-get -y install python3-pip
     # or
     yum install python3-pip -y
+
+An example .flaskenv is provided: `.flaskenv.example`. Configure it to your specifications, then create a copy of it named `.flaskenv` that the application can refer to. If you have no additional configurations to specify, simply copy the provided example.
+
+    cp .flaskenv.example .flaskenv  
 
 ## Usage:
 
